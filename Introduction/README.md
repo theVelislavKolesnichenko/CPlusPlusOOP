@@ -57,28 +57,48 @@ int main()
 
 Създайте:
 
-- File: Foo.h
+- File: Point.h
 
 ```cpp
-#include "Num.h" 
-class Foo 
-{  
-  private:
-    Num n;
-  public:   
-    Foo(Num n); 
-}; 
+#include "Num.h"
+
+class Point
+{
+public:
+	Point(Num x, Num y);
+	Num get_x();
+	Num get_y();
+
+private:
+	Num num_x;
+	Num num_y;
+};
  
 ```
-- File: Num.cpp 
+- File: Point.cpp 
 
 ```cpp
-#include "Num.h" 
- 
-Num::Num() { num = 0; } 
-Num::Num(int n) { num = n; } 
-int Num::getNum() 
-{  
-  return num; 
-} 
+#include "Point.h"
+
+Point::Point(Num x, Num y)
+{
+	num_x = x;
+	num_y = y;
+}
+
+Num Point::get_x()
+{
+	return num_x;
+}
+
+Num Point::get_y()
+{
+	return num_y;
+}
 ```
+Използвайте директивата
+
+#ifndef <Име на файла>_H 
+#define <Име на файла>_H 
+  <дефиниране на класа> 
+#endif 
