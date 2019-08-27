@@ -18,7 +18,9 @@ class Num
   private:   
     int num;  
   public:   
-    Num(int n);   
+    Num();
+    Num(int n);
+    Num( const Num &obj);
     int getNum(); 
 }; 
 ```
@@ -31,7 +33,7 @@ Num::Num() { num = 0; }
 Num::Num(int n) { num = n; } 
 int Num::getNum() 
 {  
-return num; 
+  return num; 
 } 
 ```
 - File: main.cpp 
