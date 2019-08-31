@@ -35,17 +35,13 @@ bool Line::operator<(const Line& d)
 ## Предефиниране на оператор (>>, <<)
 
 ```cpp
-bool Line::operator<(const Line& d)
-{
-	Line obj = d;
-	if (this->length() < obj.length()) {
-		return true;
-	}
-	if (this->length() > obj.length()) {
-		return true;
-	}
+friend ostream& operator<<(ostream& output, const Point& point);
 
-	return false;
+ostream& operator<<(ostream& output, const Point& point)
+{
+	Point obj = point;
+	output << "Point (x, y): (" << obj.get_x().getNum() << ", " << obj.get_y().getNum() << ")";
+	return output;
 }
 ```
 
