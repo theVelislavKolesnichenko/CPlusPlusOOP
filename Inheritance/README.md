@@ -81,3 +81,8 @@ ostream& operator<<(ostream& output, const Complex& complex)
 # Задача 3:
 
 Създайте класове Rectangle, Triangle наследяващи Shape с полета дължина и ширина, метод за изчисление на площа.
+Упътване: Използвайте виртуална функция, за използване на метода area от инстанцирания клас.
+
+```cpp
+virtual int area();
+```
