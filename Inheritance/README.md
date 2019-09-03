@@ -58,6 +58,7 @@ Complex Complex::operator+(Complex const& obj)
 ostream& operator<<(ostream& output, const Complex& complex)
 {
 	output << complex.num << " + i" << complex.imag << endl;
+	return output;
 }
 ```
 
