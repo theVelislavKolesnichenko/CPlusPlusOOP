@@ -6,9 +6,9 @@
 # Шаблонна функция
 
 ```cpp
-template <typename T> T max(T x, T y) 
+template <typename T> T large(T x, T y) 
 { 
-   return (x > y)? x: y; 
+   return (x > y) ? x: y; 
 } 
 ```
 # Задача 1
@@ -20,6 +20,8 @@ template <typename T> T max(T x, T y)
 Съставете функция която да разменя стоиност от две променливи.
 
 # Шаблоннн клас
+
+Файл: Calculator.h
 
 ```cpp
 template <class T> class Calculator
@@ -51,4 +53,22 @@ public:
 
 	T divide() { return num1 / num2; }
 };
+```
+
+Файл: main.cpp
+
+```cpp
+int main()
+{
+	Calculator<int> intCalc(2, 1);
+	Calculator<float> floatCalc(2.4, 1.2);
+	
+	cout << "Int results:" << endl;
+	intCalc.displayResult();
+	
+	cout << endl << "Float results:" << endl;
+	floatCalc.displayResult();
+	
+	return 0;
+}
 ```
